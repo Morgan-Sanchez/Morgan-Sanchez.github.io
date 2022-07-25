@@ -7,6 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7MNFHM6S7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7MNFHM6S7');
+</script>
 </head>
 
 <body class="is-preload">
@@ -53,13 +62,14 @@
 					<header class="major">
 						<h2>About Me</h2>
 						<p>
-							Hi, and welcome to my page! My name is Morgan, and I'm a first year PhD student
+							Hi, and welcome to my page! My name is Morgan, and I'm a second year PhD student
 							in the
 							<a style="color: #ca4a4a;" href="https://dbmi.hms.harvard.edu/education/big-phd-program"
 								target="_blank">
 								Bioinformatics and Integrative Genomics (BIG) program
-							</a> at Harvard Medical School. I did a double degree program in undergrad, where
-							I studied both music and biomedical engineering, and where I also had my first
+							</a> at Harvard Medical School. In my undergrad,
+							I studied both music and biomedical engineering as part of a double degree program. 
+							This is also where I had my first
 							research experience in the Johns Hopkins University Applied Physics Lab (JHUAPL)
 							<a style="color: #ca4a4a;" href="https://www.jhuapl.edu/circuit/" target="_blank">CIRCUIT
 								program
@@ -142,7 +152,9 @@
 							<div class="inner">
 								<h4>Connectomics Annotation Metadata Standardization for Increased Accessibility and
 									Queryability</h4>
+								
 								<p style="font-size: 0.7em; line-height: 1.5em;">
+									
 									In an effort to better understand structural organization and anatomy of nervous
 									systems at nanoscale spatial
 									resolution, researchers have collected increasingly large, even petascale,
@@ -161,7 +173,7 @@
 									</a> for exploring and querying the dataset. 
 									<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9150677/" target='_blank' 
 									style="color: #ca4a4a;">Read More.</a></p>
-							</div>
+								</div>
 							<ul class="feature-icons2">
 								<li class="icon solid fa-book-open"
 									style="font-size: 0.8em;  color: #ca4a4a; font-weight: bold;">
@@ -202,11 +214,13 @@
 						</article>
 						
 						<article>
-							<a class="image"> <i class='fas fa-brain fa-10x' style='color:#c94b4a'> </i></a>
+							<a class="image"> <i class='fas fa-brain fa-9x' style='color:#c94b4a;'> </i></a>
 							<div class="inner">
 								<h4>Examining Plaque Toxicity to Synaptic Activity in an Alzheimer’s Disease Mouse Model
 								</h4>
+							
 								<p style="font-size: 0.7em; line-height: 1.5em;">
+									
 									Alzheimer's is a disease that causes patients to progressively lose memory and
 									cognitive function, typically living
 									only 4-7 years after diagnosis due to limited treatment options. Biochemically,
@@ -225,13 +239,47 @@
 								</p>
 							</div>
 							<ul class="feature-icons2">
-								<li class="icon solid fa-chalkboard"
-									style="font-size: 0.8em;  color: #ca4a4a; font-weight: bold;">
-									National Library of Medicine Informatics Training Conference 2022</li>
+								<li class="icon solid fa-award"
+									style="font-size: 0.8em;  color: #ca4a4a; font-weight: bold; text-align-last: center;">
+									National Library of Medicine Informatics Training Conference 2022
+									<br> Best Research Idea
+								</li>
 							</ul>
 						</article>
 						<article>
-							<a class="image"> <i class='fas fa-book-medical fa-10x'
+							<a class="image"> <i class='fas fa-file-medical fa-10x' style='color:#c94b4a; height: 100%;'> </i></a>
+							<div class="inner">
+								<h4>Efficient and Accurate Integration of Diagnostic Machine Learning Models into Radiology Reporting Workflows</h4>
+							
+								<p style="font-size: 0.7em; line-height: 1.5em;">
+									
+									AI-based decision support tools typically aim to accomplish two major goals: improve patient care and 
+									reduce provider cost and burden. To mitigate the risks of poor AI performance, however, these 
+									clinical machine learning models are often used in an assistive setting, where the final decision is 
+									still made by a clinician. This allows for clinicians to correct mistakes made by the AI, but it 
+									still puts a heavy burden on the user, even in easy cases where the AI and the clinician might agree. 
+									Additionally, the user is often provided with all predicted diagnoses equivalently, regardless of 
+									accuracy or urgency, which may limit the effectiveness of the tool and introduce dangerous biases.
+								</p>
+								</div>
+								<p style="font-size: 0.7em; line-height: 1.5em; padding-top: 1em;">
+									
+									For this project, we were given access to real-world production data from a AI-based 
+									chest x-ray interpretation tool and set out to answer the question, "How can we use this data to improve
+									the tool?" One of our initial ideas was to predict disagreement in this particular deployment setting, 
+									but then the question was "Even if we could predict disagreement, how would that be incorportated into
+									the clinical workflow and what expected effects would its integration have?". We studied disagreement in
+									this real-world data, designed a pipeline that integrates diagnostic, disagreement, and prediction 
+									quality modeling, and estimated how this pipeline would compare to the existing pipeline, 
+									which only makes use of the diagnostic model, in terms of clinician burden, all using the real-world 
+									production data. Overall, we found that the novel pipeline does not differ substantially in terms of expected 
+									burden, but we argue that it may protect against common AI-safety issues. 
+									This was a project completed as part of a rotation in Pranav Rajpurkar's lab.
+								</p>
+							
+						</article>
+						<article>
+							<a class="image"> <i class='fas fa-book fa-10x'
 									style='color:#c94b4a; text-align: center;'> </i></a>
 							<div class="inner">
 								<h4>A Review of Recent Randomized Controlled Trials for Human-AI Collaboration in

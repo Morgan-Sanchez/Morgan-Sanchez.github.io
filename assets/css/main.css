@@ -2715,20 +2715,22 @@ ul.feature-icons2 {
 
 		.features article .image {
 			display: inline-block;
-			padding-right: 2.5em;
+			padding-right: 1em;
 			vertical-align: middle;
-			width: 38%;
+			text-align: center;
+			width: 25%;
 		}
 
 			.features article .image img {
 				display: block;
 				width: 100%;
+				align-items: center;
 			}
 
 		.features article .inner {
 			display: inline-block;
 			vertical-align: middle;
-			width: 60%;
+			width: 74%;
 		}
 
 			.features article .inner > :last-child {
