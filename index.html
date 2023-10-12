@@ -62,12 +62,12 @@
 					<header class="major">
 						<h2>About Me</h2>
 						<p>
-							Hi, and welcome to my page! My name is Morgan, and I'm a second year PhD student
+							Hi, and welcome to my page! My name is Morgan, and I'm a third year PhD student
 							in the
 							<a style="color: #ca4a4a;" href="https://dbmi.hms.harvard.edu/education/big-phd-program"
 								target="_blank">
 								Bioinformatics and Integrative Genomics (BIG) program
-							</a> at Harvard Medical School. In my undergrad,
+							</a> at Harvard Medical School and member of Raj Manrai's lab. In my undergrad,
 							I studied both music and biomedical engineering as part of a double degree program. 
 							This is also where I had my first
 							research experience in the Johns Hopkins University Applied Physics Lab (JHUAPL)
@@ -83,21 +83,27 @@
 							the first iteration of CIRCUIT-ASPIRE, the high school version of CIRCUIT. <br />
 							<br />
 							In August of 2021, I moved to Boston to pursue my PhD, supported by the Biomedical
-							Informatics and Data Science Research Training (BIRT) fellowship. Here, I am
-							currently taking courses and pursuing rotations in labs in both the nanoscale
+							Informatics and Data Science Research Training (BIRT) fellowship. Here, I pursued
+							 rotations in labs in both the nanoscale
 							connectomics and healthcare AI spaces (
 							<a style="color: #ca4a4a;" href="https://lichtmanlab.fas.harvard.edu/" target="_blank">
 								Jeff Lichtman
 							</a>,
 							<a style="color: #ca4a4a;" href="https://rajpurkarlab.hms.harvard.edu/" target="_blank">
 								Pranav Rajpurkar
+							</a>,
+							<a style="color: #ca4a4a;" href="https://dbmi.hms.harvard.edu/people/arjun-raj-manrai" target="_blank">
+								Raj Manrai
+							</a>,
+							<a style="color: #ca4a4a;" href="https://zaklab.org/" target="_blank">
+								Isaac Kohane
 							</a>
 							). Some
 							areas of particular interest to me are how nanoscale connectomics can be used to
 							study human disease, what makes a machine learning model successful in the clinical
 							domain, and how we might detect and mitigate biases perpetuated by AI healthcare
-							models. I look forward to continuing to learn about these areas and explore my curiosities
-							and to eventually joining a lab!
+							models. I look forward to continuing to learn about these topics and grow as a scientist 
+							through my research in the Manrai lab!
 						</p>
 
 						<div class="row">
@@ -148,6 +154,61 @@
 					<p></p>
 					<div class="features">
 						<article>
+							<a href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00374-9?rss=yes&utm_source=dlvr.it&utm_medium=twitter" target="_blank" class="image">
+								<img src="images/radai_paper.png" alt="" /></a>
+							<div class="inner">
+								<h4>AI-clinician collaboration via disagreement prediction: A decision pipeline and retrospective analysis of real-world radiologist-AI interactions</h4>
+							
+								<p style="font-size: 0.7em; line-height: 1.5em;">
+									
+									Clinical decision support tools can improve diagnostic performance or reduce variability, but they are 
+									also subject to post-deployment underperformance. Although using AI in an assistive setting offsets 
+									many concerns with autonomous AI in medicine, systems that present all predictions equivalently 
+									fail to protect against key AI safety concerns. We design a decision pipeline that supports 
+									the diagnostic model with an ecosystem of models, integrating disagreement prediction, clinical 
+									significance categorization, and prediction quality modeling to guide prediction presentation. 
+									We characterize disagreement using data from a deployed chest X-ray interpretation aid and 
+									compare clinician burden in this proposed pipeline to the diagnostic model in isolation. 
+									The average disagreement rate is 6.5%, and the expected burden reduction is 4.8%, even if 
+									5% of disagreements on urgent findings receive a second read. We conclude that, in our 
+									production setting, we can adequately balance risk mitigation with clinician burden if 
+									disagreement false positives are reduced. 
+									<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9150677/" target='_blank' 
+									style="color: #ca4a4a;">Read More.</a>
+								</p>
+								</div>
+								<ul class="feature-icons2">
+									<li class="icon solid fa-book-open"
+										style="font-size: 0.8em;  color: #ca4a4a; font-weight: bold;">
+										Sanchez, Morgan, et al. "AI-clinician collaboration via disagreement prediction: 
+										A decision pipeline and retrospective analysis of real-world radiologist-AI 
+										interactions." Cell Reports Medicine (2023).
+ 
+									</li>
+								</ul>
+						</article>
+						<article>
+							<a  class="image">
+								<img src="images/kidneys.png" alt="" /></a>
+							<div class="inner">
+								<h4>Cancer Treatment and Trial Eligibility Changes from Estimating Kidney 
+									Function without Race</h4>
+								<p style="font-size: 0.7em; line-height: 1.5em;">
+									In patients with cancer, kidney function assessment is instrumental for guiding treatment and 
+									determining trial eligibility. Many oncologists rely on serum creatinine or creatinine 
+									clearance, but nephrology guidelines recommend evaluation of glomerular filtration rate 
+									(GFR), with estimated GFR (eGFR) from serum creatinine as the first step. After calls 
+									to reconsider race in GFR estimation, the National Kidney Foundation and the American 
+									Society of Nephrology (NKF-ASN) recommended moving towards race-free eGFR equations, 
+									namely the 2021 Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) creatinine 
+									and creatinine/cystatin C combined eGFR equations. Many medical centers have made the 
+									shift to new equations, but the implications for both Black and non-Black cancer 
+									patients on treatment and trial eligibility are unclear. In this project, we estimate 
+									clinical implications of the shift to race-free equations on U.S. cancer patients.
+								</p>
+							</div>
+						</article>
+						<article>
 							<a href="https://metadata.bossdb.org/" target="_blank" class="image"><img src="images/conn_queries.png" alt="" /></a>
 							<div class="inner">
 								<h4>Connectomics Annotation Metadata Standardization for Increased Accessibility and
@@ -168,7 +229,7 @@
 									example database and API for storing and accessing the first nanoscale human
 									connectomics dataset, and create a
 									user-friendly 
-									<a href="https://metadata.bossdb.org/" target='_blank' style="color: #ca4a4a;">
+									<a href="https://queries.bossdb.org/" target='_blank' style="color: #ca4a4a;">
 										web app
 									</a> for exploring and querying the dataset. 
 									<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9150677/" target='_blank' 
@@ -247,38 +308,6 @@
 							</ul>
 						</article>
 						<article>
-							<a class="image"> <i class='fas fa-file-medical fa-10x' style='color:#c94b4a; height: 100%;'> </i></a>
-							<div class="inner">
-								<h4>Efficient and Accurate Integration of Diagnostic Machine Learning Models into Radiology Reporting Workflows</h4>
-							
-								<p style="font-size: 0.7em; line-height: 1.5em;">
-									
-									AI-based decision support tools typically aim to accomplish two major goals: improve patient care and 
-									reduce provider cost and burden. To mitigate the risks of poor AI performance, however, these 
-									clinical machine learning models are often used in an assistive setting, where the final decision is 
-									still made by a clinician. This allows for clinicians to correct mistakes made by the AI, but it 
-									still puts a heavy burden on the user, even in easy cases where the AI and the clinician might agree. 
-									Additionally, the user is often provided with all predicted diagnoses equivalently, regardless of 
-									accuracy or urgency, which may limit the effectiveness of the tool and introduce dangerous biases.
-								</p>
-								</div>
-								<p style="font-size: 0.7em; line-height: 1.5em; padding-top: 1em;">
-									
-									For this project, we were given access to real-world production data from a AI-based 
-									chest x-ray interpretation tool and set out to answer the question, "How can we use this data to improve
-									the tool?" One of our initial ideas was to predict disagreement in this particular deployment setting, 
-									but then the question was "Even if we could predict disagreement, how would that be incorportated into
-									the clinical workflow and what expected effects would its integration have?". We studied disagreement in
-									this real-world data, designed a pipeline that integrates diagnostic, disagreement, and prediction 
-									quality modeling, and estimated how this pipeline would compare to the existing pipeline, 
-									which only makes use of the diagnostic model, in terms of clinician burden, all using the real-world 
-									production data. Overall, we found that the novel pipeline does not differ substantially in terms of expected 
-									burden, but we argue that it may protect against common AI-safety issues. 
-									This was a project completed as part of a rotation in Pranav Rajpurkar's lab.
-								</p>
-							
-						</article>
-						<article>
 							<a class="image"> <i class='fas fa-book fa-10x'
 									style='color:#c94b4a; text-align: center;'> </i></a>
 							<div class="inner">
@@ -308,6 +337,7 @@
 					<h3 style="color: rgb(177, 48, 48);">Programming Languages</h3>
 					<ul class="feature-icons">
 						<li class="icon solid fa-file-code">Python (adv)</li>
+						<li class="fa-solid fa-registered">R (int)</li>
 						<li class="icon solid fa-laptop-code">Java (int)</li>
 						<li class="icon solid fa-terminal">C/C++ (beg)</li>
 						<li class="icon solid fa-code">HTML/CSS (beg)</li>
@@ -353,7 +383,13 @@
 							Ventilated ICU Patients (Presented at 2021 Dept. of Medicine/Whiting School of
 							Engineering (WSE) Research Retreat, WSE Research Award Finalist)
 						</p>
-
+						
+						<h5> MIT.6.8610: Quantitative Natural Language Processing</h5>
+						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
+							Course Description: covers both modern and classic approaches to NLP with 
+							a particular focus on statistical methods
+							Group Project: Speak Up! A Probabilistic and Practical Approach for Turn-Taking Prediction
+						</p>
 
 						<h5> JHU Neuro Data Design</h5>
 						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
