@@ -2161,6 +2161,12 @@ input, select, textarea {
 			-ms-object-position: 25% 75%;
 			object-position: 25% 75%;
 		}
+		.image.low-opac img {
+			opacity: 0.6
+		}
+		.image:hover.low-opac img {
+			opacity: 1
+		}
 
 		.image img {
 			border-radius: 5px;
@@ -2417,6 +2423,15 @@ input, select, textarea {
 				top: 0;
 				width: 2.5em;
 			}
+			ul.feature-icons.image img {
+				left: 0;
+				line-height: 2.5em;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 2.5em;
+			}
+			
 /* Feature Icons2 */
 
 ul.feature-icons2 {
