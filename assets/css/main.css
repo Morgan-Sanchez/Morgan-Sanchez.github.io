@@ -3409,3 +3409,25 @@ ul.feature-icons2 {
 		  color:rgba(193, 15, 15, 0.856);
 		  font-weight: bold;
 	  }
+	  .pets-container {
+		display: flex; /* To align photos next to each other */
+		justify-content: space-around; /* Space between the images */
+		margin-top: 20px;
+	}
+	
+	.pet {
+		text-align: center; /* Center the name under each photo */
+	}
+	
+	.pet img {
+		width: 200px; /* Set a fixed width for the images */
+		height: auto; /* Maintain the aspect ratio */
+		border-radius: 10px; /* Optional: Rounded corners */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow around the image */
+	}
+	
+	.pet p {
+		font-size: 1.2em; /* Adjust font size for the names */
+		margin-top: 10px; /* Space between the image and the name */
+		color: #333; /* Optional: Change text color */
+	}
