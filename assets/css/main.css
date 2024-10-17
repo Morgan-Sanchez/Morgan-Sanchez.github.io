@@ -2775,7 +2775,7 @@ ul.feature-icons2 {
 		text-align: center;
 		top: 0;
 		width: 23em;
-		right: 0;
+		left: 0;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2821,6 +2821,13 @@ ul.feature-icons2 {
 				color: #f2d2d2;
 				font-style: italic;
 				margin: 1em 0 0 0;
+			}
+
+			#header > header p2 {
+				color: #f2d2d2;
+				font-style: normal;
+				font-size: 0.8em;
+				margin: 0em 0 0 0;
 			}
 
 		#header > footer {
@@ -2886,7 +2893,7 @@ ul.feature-icons2 {
 
 	#wrapper {
 		background: #fff;
-		padding-right: 23em;
+		padding-left: 21em;
 	}
 
 /* Main */
@@ -2896,7 +2903,7 @@ ul.feature-icons2 {
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			padding: 6em 0em 4em 0em;
 		}
 
 		#main > section:first-child {
@@ -2964,7 +2971,7 @@ ul.feature-icons2 {
 		/* Wrapper */
 
 			#wrapper {
-				padding-right: 21em;
+				padding-left: 21em;
 			}
 
 		/* Main */
@@ -3399,6 +3406,6 @@ ul.feature-icons2 {
 		}
 	  }
 	  .current{
-		  color:rgba(92, 88, 88, 0.856);
+		  color:rgba(193, 15, 15, 0.856);
 		  font-weight: bold;
 	  }
