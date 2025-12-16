@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("all.css");
+/*@import url("all.css");*/
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
 /*
@@ -3364,7 +3364,7 @@ ul.feature-icons2 {
 		width: 50%;
 	  }
 	}
-	  @media screen and (max-width: 660px) {
+	@media screen and (max-width: 660px) {
 		.column {
 		  width: 100%;
 		  padding-left: 20%;
@@ -3396,6 +3396,32 @@ ul.feature-icons2 {
 	}
 	
 	.pet p {
+		font-size: 1.2em;
+		margin-top: 10px; 
+		color: #bb4343;
+	}
+
+	.pottery-container {
+			display: flex; 
+			justify-content: center; 
+			flex-wrap: wrap;
+			gap: 20px; 
+			margin-top: 20px;
+	}
+		
+	.pottery-item {
+		text-align: center; 
+	}
+	
+	.pottery-item img {
+		width: 250px; 
+		height: 310px;
+		object-fit: cover; 
+		border-radius: 10px; 
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+	}
+	
+	.pottery-item p {
 		font-size: 1.2em;
 		margin-top: 10px; 
 		color: #bb4343;

@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Morgan Sanchez</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" href="images/m.png">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7MNFHM6S7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7MNFHM6S7');
+</script>
+</head>
+
+<body class="is-preload" style="margin-top: 50px;">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="images/morgan10.png" alt="" /></span>
+			<h1 id="logo"><a href="#">Morgan Sanchez</a></h1>
+			<p2>PhD Candidate | Biomedical Informatics</p2>
+			<p>Working and learning at the intersections of<br />
+				Machine Learning, Healthcare, and Neuroscience</p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html#about-me">About Me</a></li>
+				<li><a href="index.html#research">Research</a></li>
+				<li><a href="index.html#skills-courses">Skills and Related Coursework</a></li>
+                <li><a href="pottery.html" class="active">Ceramics</a></li>
+                <li><a href="fun_stuff.html">Creative Work and Pets!</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<!--<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
+				<li><a href="mailto: MorganSanchez@g.harvard.edu" class="icon solid fa-envelope"><span
+					class="label">Email</span></a></li>
+				<li><a href="https://scholar.google.com/citations?user=ONPZhy8AAAAJ&hl=en" target="_blank" 
+					class="image low-opac"><img src="images/scholar.png" alt="" width="18px"/><span
+					class="label"></span></a></li>
+				<li><a href="https://www.linkedin.com/in/morgan-sanchez-5716619b/" target="_blank" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a href="https://twitter.com/morgansanchez_" target="_blank" class="icon solid fa-twitter"><span
+					class="label">Twitter</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+        <!--
+        <section id="pottery">
+  <div class="container">
+    <h3 style="color: rgb(177, 48, 48);">Pottery Gallery</h3>
+    <div id="pottery-gallery" class="pets-container"> </div>  pets-container pottery-container
+  </div>
+</section>
+-->
+<section id="pottery">
+  <div class="container">
+    <h2 style="color: rgb(177, 48, 48);">Featured Pottery</h3>
+        Outside of the lab, I attend classes at the Harvard Ceramics Program, where I enjoy creating functional pottery pieces and 
+        selling them at the semi-annual Harvard Ceramics Program Show and Sale.
+        Below are photos of some of my work! Many of these pieces have been sold, but I do still have a few following the latest 
+        show. For inquiries about purchasing pieces, please contact me via email. 
+    <!-- JS will fill this with per-category sections -->
+    <div id="pottery-gallery"></div>
+  </div>
+</section>
+<!--
+<script>
+function loadPotteryGallery() {
+  fetch("images/pottery/pottery.csv")
+    .then(response => {
+      console.log("CSV status:", response.status, "URL:", response.url);
+      return response.text();
+    })
+    .then(text => {
+      console.log("RAW CSV (first 300 chars):\n", text.slice(0, 300));
+
+      const lines = text.trim().split(/\r?\n/);
+      console.log("Total lines (incl. header):", lines.length);
+
+      if (lines.length <= 1) {
+        console.warn("CSV has no data rows");
+        return;
+      }
+
+      const headerRaw  = lines[0].split(",");
+      const header     = headerRaw.map(h => h.trim().toLowerCase());
+      console.log("HEADER:", header);
+
+      const filenameIdx = header.indexOf("filename");
+      const hoverIdx    = header.indexOf("hover");     // <--- NEW
+      const captionIdx  = header.indexOf("caption");
+
+      console.log("filenameIdx:", filenameIdx, "hoverIdx:", hoverIdx, "captionIdx:", captionIdx);
+
+      if (filenameIdx === -1) {
+        console.error("No 'filename' column found in header");
+        return;
+      }
+
+      const gallery = document.getElementById("pottery-gallery");
+      gallery.innerHTML = "";
+      gallery.style.display = "block";
+
+      function updateColumns() {
+        const w = window.innerWidth;
+        let cols = 1;
+
+        if (w >= 3000) cols = 4;
+        else if (w >= 2000) cols = 3;
+        else if (w >= 1000) cols = 2;
+        else cols = 1;
+
+        gallery.style.columnCount = cols;
+      }
+
+      updateColumns();
+      window.addEventListener("resize", updateColumns);
+      gallery.style.columnGap = "15px";
+      gallery.style.marginTop = "0px";
+
+      lines.slice(1).forEach((line, i) => {
+        if (!line.trim()) return;
+
+        const cells    = line.split(",").map(c => c.trim());
+        const filename = cells[filenameIdx] || "";
+        const hover    = hoverIdx >= 0 ? (cells[hoverIdx] || "") : "";
+        const caption  = captionIdx >= 0 ? (cells[captionIdx] || "") : "";
+
+        console.log(`ROW ${i + 2}:`, { filename, hover, caption });
+
+        if (!filename) return;
+
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("pet");
+        wrapper.style.display = "inline-block";
+        wrapper.style.width = "100%";
+        wrapper.style.height = "100%";
+        wrapper.style.margin = "0 0 2px 0";
+        wrapper.style.breakInside = "avoid";
+        wrapper.style.webkitColumnBreakInside = "avoid";
+        wrapper.style.pageBreakInside = "avoid";
+
+        // PRIMARY + HOVER LOGIC
+        const primarySrc = "images/pottery/" + filename;
+        const hoverSrc   = hover ? "images/pottery/" + hover : null;
+
+        const img = document.createElement("img");
+        img.src = primarySrc;
+        img.alt = caption || "";
+
+        img.style.width  = "100%";
+        img.style.height = "auto";
+        img.style.marginTop = "0px";
+        img.style.objectFit = "contain";
+        img.style.display = "block";
+
+        // If there is a hover image, swap src on hover
+        if (hoverSrc) {
+          // mouse
+          img.addEventListener("mouseenter", () => { img.src = hoverSrc; });
+          img.addEventListener("mouseleave", () => { img.src = primarySrc; });
+
+          // keyboard accessibility
+          img.tabIndex = 0;
+          img.addEventListener("focus", () => { img.src = hoverSrc; });
+          img.addEventListener("blur", () => { img.src = primarySrc; });
+        }
+
+        const p = document.createElement("p");
+        p.textContent = caption || "";
+        p.style.marginTop = "1px";
+
+        wrapper.appendChild(img);
+        wrapper.appendChild(p);
+        gallery.appendChild(wrapper);
+      });
+    })
+    .catch(err => {
+      console.error("Error loading pottery.csv:", err);
+    });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadPotteryGallery);
+} else {
+  loadPotteryGallery();
+}
+</script>
+-->
+<script>
+function loadPotteryGallery() {
+  fetch("images/pottery/pottery.csv")
+    .then(response => response.text())
+    .then(text => {
+      const lines = text.trim().split(/\r?\n/);
+      if (lines.length <= 1) return; // no data
+
+      const headerRaw  = lines[0].split(",");
+      const header     = headerRaw.map(h => h.trim().toLowerCase());
+
+      const filenameIdx  = header.indexOf("filename");
+      const hoverIdx     = header.indexOf("hover");
+      const captionIdx   = header.indexOf("caption");
+      const categoryIdx  = header.indexOf("category");
+      const availableIdx = header.indexOf("available");
+      const priceIdx     = header.indexOf("price");
+
+      if (filenameIdx === -1) {
+        console.error("No 'filename' column found in pottery.csv");
+        return;
+      }
+
+      const root = document.getElementById("pottery-gallery");
+      root.innerHTML = "";
+
+      // Group rows by category
+      const itemsByCategory = new Map();
+
+      lines.slice(1).forEach(line => {
+        if (!line.trim()) return;
+        const cells = line.split(",").map(c => c.trim());
+
+        const filename = cells[filenameIdx] || "";
+        if (!filename) return;
+
+        const hover    = hoverIdx     >= 0 ? (cells[hoverIdx]     || "") : "";
+        const caption  = captionIdx   >= 0 ? (cells[captionIdx]   || "") : "";
+        const category = categoryIdx  >= 0 ? (cells[categoryIdx]  || "") : "";
+        const availableRaw = availableIdx >= 0 ? (cells[availableIdx] || "") : "";
+        const price    = priceIdx     >= 0 ? (cells[priceIdx]     || "") : "";
+
+        const available = /^(true|yes|1)$/i.test(availableRaw);
+
+        const item = { filename, hover, caption, category, available, price };
+        const key = category || "More Featured Work";
+
+        if (!itemsByCategory.has(key)) itemsByCategory.set(key, []);
+        itemsByCategory.get(key).push(item);
+      });
+
+      // Build DOM: one masonry block per category
+      itemsByCategory.forEach((items, categoryName) => {
+        const section = document.createElement("section");
+        section.classList.add("pottery-category");
+
+        const heading = document.createElement("h3");
+        heading.classList.add("pottery-category-title");
+        heading.textContent = categoryName;
+        section.appendChild(heading);
+        heading.style.color = "rgb(177, 48, 48)";
+
+        const masonry = document.createElement("div");
+        masonry.classList.add("pottery-masonry");
+        section.appendChild(masonry);
+
+        items.forEach(item => {
+          const primarySrc = "images/pottery/" + item.filename;
+          const hoverSrc   = item.hover ? "images/pottery/" + item.hover : null;
+
+          const card = document.createElement("div");
+          card.classList.add("pottery-item");
+          card.style.display = "inline-block";
+          card.style.width   = "100%";
+          card.style.margin  = "0 0 20px 0";
+          card.style.breakInside = "avoid";
+          card.style.webkitColumnBreakInside = "avoid";
+          card.style.pageBreakInside = "avoid";
+
+          const img = document.createElement("img");
+          img.src = primarySrc;
+          img.alt = item.caption || item.category || "";
+
+          img.style.width  = "100%";
+          img.style.height = "auto";
+          img.style.display = "block";
+          img.style.objectFit = "cover";
+
+          // hover swap if a hover image exists
+          if (hoverSrc) {
+            img.addEventListener("mouseenter", () => { img.src = hoverSrc; });
+            img.addEventListener("mouseleave", () => { img.src = primarySrc; });
+
+            img.tabIndex = 0;
+            img.addEventListener("focus", () => { img.src = hoverSrc; });
+            img.addEventListener("blur", () => { img.src = primarySrc; });
+          }
+
+          // Caption logic:
+          // 1) If caption in CSV, use it.
+          // 2) Else if available==true, show "Available – $price" (price optional).
+          // 3) Else, no caption element.
+          let captionText = "";
+          if (item.caption) {
+            captionText = item.caption;
+          } else if (item.available) {
+            captionText = item.price
+              ? `Available – $${item.price}`
+              : "Available";
+          }
+
+          if (captionText) {
+            const p = document.createElement("p");
+            p.textContent = captionText;
+            card.appendChild(img);
+            card.appendChild(p);
+          } else {
+            card.appendChild(img);
+          }
+
+          masonry.appendChild(card);
+        });
+
+        root.appendChild(section);
+      });
+
+      // Column layout (masonry) for each category block
+      function updateColumns() {
+        const w = window.innerWidth;
+        let cols = 1;
+        if (w >= 3000) cols = 4;
+        else if (w >= 2700) cols = 3;
+        else if (w >= 1000) cols = 2;
+        else cols = 1;
+
+        document.querySelectorAll(".pottery-masonry").forEach(masonry => {
+          masonry.style.columnCount = cols;
+          masonry.style.columnGap = "15px";
+        });
+      }
+
+      updateColumns();
+      window.addEventListener("resize", updateColumns);
+    })
+    .catch(err => {
+      console.error("Error loading pottery.csv:", err);
+    });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadPotteryGallery);
+} else {
+  loadPotteryGallery();
+}
+</script>
+
+<!-- s
+    Footer
+-->
+        <section id="footer">
+            <div class="container">
+                
+            </div>
+        </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
