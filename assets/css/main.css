@@ -2777,6 +2777,7 @@ ul.feature-icons2 {
 		top: 0;
 		width: 23em;
 		left: 0;
+		z-index: 10000;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2958,7 +2959,7 @@ ul.feature-icons2 {
 		/* Header */
 
 			#header {
-				width: 23em;
+				width: 22em;
 			}
 
 				#header > header {
@@ -2972,7 +2973,7 @@ ul.feature-icons2 {
 		/* Wrapper */
 
 			#wrapper {
-				padding-left: 23em;
+				padding-left: 19em;
 			}
 
 		/* Main */
@@ -2999,10 +3000,13 @@ ul.feature-icons2 {
 				position: fixed;
 				top: 0;
     			left: 0;
-				width: 23em;
+				width: 22em;
 			}
 
 		/* Wrapper */
+		#wrapper {
+				padding-left: 19em;
+			}
 
 			
 
@@ -3085,6 +3089,7 @@ ul.feature-icons2 {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding: 44px 0 1px 0;
+				
 			}
 
 		/* Header Panel */
