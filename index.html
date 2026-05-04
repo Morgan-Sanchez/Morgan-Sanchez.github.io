@@ -22,19 +22,19 @@
 <body class="is-preload">
 
 	<!-- Header -->
-	<section id="header" style="width: auto;">
+	<!--<section id="header" style="width: auto;">-->
+		<section id="header" style="">
 		<header>
-			<span class="image avatar"><img src="images/morgan10.png" alt="" /></span>
+			<span class="image avatar"><img src="images/headshot.png" alt="" /></span>
 			<h1 id="logo"><a href="#">Morgan Sanchez</a></h1>
 			<p2>PhD Candidate | Biomedical Informatics</p2>
-			<p>Working and learning at the intersections of<br />
-				Machine Learning, Healthcare, and Neuroscience</p>
+			<p>Turning real-world clinical data <br />into better healthcare with machine learning</p>
 		</header>
 		<nav id="nav">
 			<ul>
 				<li><a href="#about-me" class="active">About Me</a></li>
 				<li><a href="#research">Research</a></li>
-				<li><a href="#skills-courses">Skills and Related Coursework</a></li>
+				<li><a href="#skills-courses">Skills</a></li>
 				<li><a href="fun_stuff.html">Life Outside the Lab</a></li>
                 <li><a href="pottery.html" style="font-size: 0.9em; font-style: italic;">Ceramics Portfolio</a></li>
 			</ul>
@@ -63,38 +63,27 @@
 
 			<!-- One -->
 			<section id="about-me">
-				<div class="image main" data-position="center" style="width: auto;">
+				<!-- <div class="image main" data-position="center" style="width: auto;">-->
+				<div class="image main" data-position="center">
 					<img src="images/HMS_edit.jpg" alt="" />
 				</div>
 				<div class="container">
 					<header class="major">
 						<h2>About Me</h2>
 						<p>
-							Hi, and welcome to my page! My name is Morgan, and I'm a fifth year PhD candidate 
-							in the
-							<a style="color: #ca4a4a;" href="https://dbmi.hms.harvard.edu/education/big-phd-program"
-								target="_blank">
-								Bioinformatics and Integrative Genomics (BIG) program
-							</a> at Harvard Medical School advised by Dr. Arjun (Raj) Manrai. I received my B.S. in 
-							Biomedical Engineering from Johns Hopkins University and my B.M. in Vocal Performance 
-							from Peabody Conservatory in 2021. <br /> <br />
+							Hi! I’m a PhD candidate in Biomedical Informatics at Harvard Medical School focused on using 
+							large-scale clinical data to improve healthcare.<br /><br />
 							
-							Generally, I am interested in harnessing health records to improve healthcare. I think a lot 
-							about when and how machine-learning based technologies should be used in the clinical domain 
-							and how to effectively develop human-AI teams to ease clinician burden and improve patient 
-							experiences and care. <br /><br />
-							
-							In my PhD research, I use statistics and machine learning to study and refine kidney function 
-							estimation, deriving insights from both national epidemiological data and longitudinal clinical data. 
-							Specifically, I have quantified the national implications of updated race-free eGFR equations 
-							on clinical decisions for oncology patients. I also hope to quantify national clinical 
-							implications of eGFR inaccuracy in the general population. <br /><br />
-							
-							In my current primary project, I am building models which utilize multiple timepoints of blood 
-							lab biomarkers to predict kidney health trajectories in collaboration with Clalit Health Services. 
-							This project involves a combination of data engineering and survival analysis as I hope to derive 
-							insights from a comprehensive, diverse, longitudinal EHR dataset with over 5 million 
-							individuals.<br /><br />
+							My work centers on evaluating and improving widely used clinical tools and understanding how they influence care in practice. 
+							I work with longitudinal health data at scale, including datasets of hundreds of thousands to millions of patients, 
+							to study patient trajectories and identify ways to better use routinely-collected measurements
+							to support clinical decision-making. <br /><br />
+
+							More broadly, I’m passionate about applying data science and machine learning to problems 
+							that have real impact in healthcare, whether that means improving patient outcomes, 
+							enhancing patient experiences, or reducing clinician burden.<br /><br />
+
+							Outside of research, I maintain creative interests in music and ceramics.
 
 							<!--As I approach the last few months of my PhD study, I am actively searching for my next opportunity.
 							I hope to find a data scientist or research associate role starting in the fall of 2026 in Boston, 
@@ -147,31 +136,49 @@
 			</section>
 			<section id="research">
 				<div class="container">
-					<h3 style="color: rgb(177, 48, 48);">Recent Research Projects</h3>
+					<h3 style="color: rgb(177, 48, 48);">Selected Research Projects</h3>
 					<p></p>
 					<div class="features">
+						<article>
+							<a  class="image">
+								<img src="images/project1_fig.png" alt="" /></a>
+							<div class="inner">
+								<h4>Laboratory Trajectories Improve Kidney Failure Risk Estimation</h4>
+								<p style="font-size: 0.7em; line-height: 1.5em;">
+									Current kidney failure risk equations rely on only a patient's most-recent laboratory values, even though patients 
+									often have years of routinely collected lab history. This project examines whether longitudinal lab 
+									trajectories can improve risk estimation while remaining interpretable and clinically grounded.<br /> <br />
+									
+									From a large EHR dataset spanning over 5 million individuals, we constructed a cohort of 270K patients with chronic 
+									kidney disease. We developed a trajectory-based extension of standard risk models that incorporates features derived 
+									from repeated laboratory measurements over time. These models improve identification of high-risk patients compared with 
+									latest-value approaches, particularly for longer-term prediction.<br /> <br />
+									
+									The results highlight how routinely collected laboratory histories contain meaningful signal beyond a single measurement, 
+									and how simple, interpretable trajectory features can improve risk stratification in clinical practice.<br /> 
+								</p>
+							</div>
+						</article>
 						<article>
 							<a href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00374-9" target="_blank" class="image">
 								<img src="images/radai_paper.png" alt="" /></a>
 							<div class="inner">
-								<h4>AI-clinician collaboration via disagreement prediction: A decision pipeline and retrospective analysis of real-world radiologist-AI interactions</h4>
+								<h4>AI-clinician collaboration via disagreement prediction<br />
+									<span style="font-size: 70%; font-style: italic; font-weight: 400; margin-top: 0.2em; line-height: 1.0; display: block; ">
+										A decision pipeline and retrospective analysis of real-world radiologist-AI interactions
+									</span>
+								</h4>
 							
 								<p style="font-size: 0.7em; line-height: 1.5em;">
-									
-									Clinical decision support tools can improve diagnostic performance or reduce variability, but they are 
-									also subject to post-deployment underperformance. Although using AI in an assistive setting offsets 
-									many concerns with autonomous AI in medicine, systems that present all predictions equivalently 
-									fail to protect against key AI safety concerns. We design a decision pipeline that supports 
-									the diagnostic model with an ecosystem of models, integrating disagreement prediction, clinical 
-									significance categorization, and prediction quality modeling to guide prediction presentation. 
-									We characterize disagreement using data from a deployed chest X-ray interpretation aid and 
-									compare clinician burden in this proposed pipeline to the diagnostic model in isolation. 
-									The average disagreement rate is 6.5%, and the expected burden reduction is 4.8%, even if 
-									5% of disagreements on urgent findings receive a second read. We conclude that, in our 
-									production setting, we can adequately balance risk mitigation with clinician burden if 
-									disagreement false positives are reduced. 
+									Model development doesn’t end at deployment. In this project, which resulted in a first-author publication in Cell Reports Medicine,
+									 we explore how post-deployment data can be 
+									used to improve AI systems in practice.<br /> <br />
+									This work develops a decision pipeline that integrates disagreement prediction with clinical significance 
+									and prediction quality to guide how AI outputs are used. 
+									Using real-world radiology data, we show that disagreement signals can be used to selectively escalate high-risk or 
+									uncertain cases, enabling a balance between reducing unnecessary clinician workload and maintaining diagnostic safety.<br />
 									<a href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00374-9" target='_blank' 
-									style="color: #ca4a4a;">Read More.</a>
+									style="color: #ca4a4a;">Read More</a>
 								</p>
 								</div>
 								<ul class="feature-icons2">
@@ -192,17 +199,13 @@
 								<h4>Cancer Treatment and Trial Eligibility Changes from Estimating Kidney 
 									Function without Race</h4>
 								<p style="font-size: 0.7em; line-height: 1.5em;">
-									In patients with cancer, kidney function assessment is instrumental for guiding treatment and 
-									determining trial eligibility. Many oncologists rely on serum creatinine or creatinine 
-									clearance, but nephrology guidelines recommend evaluation of glomerular filtration rate 
-									(GFR), with estimated GFR (eGFR) from serum creatinine as the first step. After calls 
-									to reconsider race in GFR estimation, the National Kidney Foundation and the American 
-									Society of Nephrology (NKF-ASN) recommended moving towards race-free eGFR equations, 
-									namely the 2021 Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) creatinine 
-									and creatinine/cystatin C combined eGFR equations. Many medical centers have made the 
-									shift to new equations, but the implications for both Black and non-Black cancer 
-									patients on treatment and trial eligibility are unclear. In this project, we estimate 
-									clinical implications of the shift to race-free equations on U.S. cancer patients.
+									Clinical equations can shape care far beyond the specialty where they were developed. This project examines how the shift to 
+									race-free kidney function estimation may affect cancer treatment decisions and clinical trial eligibility across the U.S.<br /> <br />
+									
+									Using nationally representative NHANES data corresponding to ~19M U.S. cancer patients, 
+									we quantify how updated eGFR equations change kidney function estimates and assess downstream impacts on oncology care.
+									The analysis projects changes affecting over 500K patients, highlighting how seemingly technical updates to 
+									clinical equations can have large-scale impacts on treatment access and eligibility.
 								</p>
 							</div>
 						</article>
@@ -212,8 +215,13 @@
 			
 			<section id="skills-courses">
 				<div class="container">
-					<h3 style="color: rgb(177, 48, 48);">Programming Languages</h3>
+					<h3 style="color: rgb(177, 48, 48);">Technical Areas</h3>
+					<p>Machine learning on longitudinal healthcare data, survival analysis, rare-event prediction, and clinical impact evaluation</p>
+					<h3 style="color: rgb(177, 48, 48);">Preferred Programming Languages</h3>
 					<ul class="feature-icons image">
+						<li class="image"><img src="images/python.png" width="40px"/>Python (primary)</li>
+						<li class="image"><img src="images/R.png" width="40px"/>R</li>
+						<!--
 						<li class="image"><img src="images/python.png" width="40px"/>Python (adv)</li>
 						<li class="image"><img src="images/R.png" width="40px"/>R (int)</li>
 						<li class="icon solid fa-laptop-code">Java (int)</li>
@@ -222,13 +230,17 @@
 						<li class="icon solid fa-database">SQL (beg)</li>
 						<li class="image"><img src="images/matlab.png" width="40px"/>MATLAB (beg)</li>
 						<li class="icon solid fa-robot">ROS (beg)</li>
-					
-
-
+						-->
+					<h3 style="color: rgb(177, 48, 48); padding-top: -30em;">Tools</h3>
+					<ul class="feature-icons image">
+						<li class="icon solid fa-cloud">Cloud Computing (AWS, GCP)</li>
+						<li class="image"><img src="images/git.png" width="40px"/>Git</li>
+						<li class="image"><img src="images/docker.png" width="40px"/>Docker</li>
+						<li class="icon solid fa-cog">Deep Learning (PyTorch, Keras)</li>
+					</ul>
+					<!---
 					<h3 style="color: rgb(177, 48, 48); padding-top: -30em;">Skills</h3>
 					<ul class="feature-icons">
-						<li class="icon solid fa-cloud">Cloud Computing</li>
-						<li class="icon solid fa-code-branch">Collaborative Software Development</li>
 						<li class="icon solid fa-brain">Neurocartography</li>
 						<li class="icon solid fa-search">Attention to Detail</li>
 						<li class="icon solid fa-chalkboard-teacher">Mentorship</li>
@@ -236,6 +248,7 @@
 						<li class="icon solid fa-lightbulb">Creativity</li>
 						<li class="icon solid fa-user-friends">Organization and Leadership</li>
 					</ul>
+					->
 				</div>
 				<div class="container">
 
@@ -245,12 +258,6 @@
 
 						<h5> MIT.6.871: Machine Learning for Healthcare</h5>
 						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
-							Course Description: Introduction to machine learning in healthcare (i.e. the nature of
-							clinical data, use of machine learning
-							for risk stratification, disease progression modeling, precision medicine, diagnosis,
-							subtype discovery,
-							and improving clinical workflows, guest lectures and course projects with real clinical
-							data) <br />
 							Group Project: Augmenting Deep-Learning-Based Catheter Malpositioning Detection with Noisy
 							Labels
 						</p>
@@ -258,17 +265,16 @@
 						<h5> JHU Precision Care Medicine</h5>
 						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
 							Group Project: Predicting Physiological Deterioration and Mortality in Mechanically
-							Ventilated ICU Patients (Presented at 2021 Dept. of Medicine/Whiting School of
-							Engineering (WSE) Research Retreat, WSE Research Award Finalist)
+							Ventilated ICU Patients<br />
+							Presented at 2021 Dept. of Medicine/Whiting School of
+							Engineering (WSE) Research Retreat, WSE Research Award Finalist
 						</p>
 						
 						<h5> MIT.6.8610: Quantitative Natural Language Processing</h5>
 						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
-							Course Description: covers both modern and classic approaches to NLP with 
-							a particular focus on statistical methods
 							Group Project: Speak Up! A Probabilistic and Practical Approach for Turn-Taking Prediction
 						</p>
-
+						<!--
 						<h5> JHU Neuro Data Design</h5>
 						<p style="font-size: 0.7em; line-height: 1.5em; padding-left: 7em;">
 							Group Project: Implemented new split criteria in forked scikit-learn decision tree (in
@@ -276,8 +282,15 @@
 							Shown to outperform all existing split criteria in the package in several nonlinear,
 							multi-output simulations
 						</p>
+						-->
+						<h5> To learn more about my journey and introduction to research, check out<a
+					href="my_story.html" 
+						style="border-bottom: solid 0px #e4e4e4; position: center;">
+					my story.</a>
+				</h5>
 					</div>
 				</div>
+				<!--
 				<div class="container">
 					<h4 style="text-align: center; ">Assessment-Based Courses</h4>
 					<table style="margin-left: 4%;">
@@ -323,11 +336,8 @@
 					</td>
 				</tr>
 				</table>
-				<h5> To learn more about my journey and introduction to research, check out<a
-					href="my_story.html" 
-						style="border-bottom: solid 0px #e4e4e4; position: center;">
-					my story.</a>
-				</h5>
+				-->
+				
 		</div>
 	</div>
 	
